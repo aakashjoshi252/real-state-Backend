@@ -19,7 +19,7 @@ module.exports.sendMessage = async (req, res) => {
     });
 
     await transporter.sendMail({
-      from: email,
+      from: process.env.EMAIL,
       to: process.env.EMAIL,
       subject: "New Lead",
       text: `Name: ${name} Email: ${email} Message: ${message}`,

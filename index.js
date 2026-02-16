@@ -25,7 +25,7 @@ const startServer = async () => {
     await connectDB();  //  FIXED HERE
 
     app.listen(port, () => {
-      console.log(`🚀 Server running on http://localhost:${port}`);
+      console.log(`🚀 Server running on https://real-state-backend-4bz6.onrender.com}`);
     });
 
   } catch (err) {
