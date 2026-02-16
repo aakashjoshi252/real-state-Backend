@@ -10,8 +10,14 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 app.use(cors({
-  origin: "*"
+  origin: [
+    "http://localhost:5173",   // local dev
+    "real-state-frontend-idb183gdk-aakashs-projects-e83c607b.vercel.app" // later
+  ],
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  credentials: true
 }));
+
 app.use(express.json());
 
 app.use("/api/contact", contactRoutes);
