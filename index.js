@@ -12,7 +12,7 @@ const port = process.env.PORT || 3000;
 app.use(cors({
   origin: [
     // "http://localhost:5173",   // local dev
-    "https://real-state-frontend-idb183gdk-aakashs-projects-e83c607b.vercel.app" // later
+"https://real-state-frontend-buc6.onrender.com"  
   ],
   methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true
@@ -31,8 +31,8 @@ const startServer = async () => {
     await connectDB();  //  FIXED HERE
 
     app.listen(port, () => {
-      console.log(`🚀 Server running on https://real-state-backend-4bz6.onrender.com}`);
-      // console.log(`🚀 Server running on http://localhost:${port}`);
+      console.log(` Server running on https://real-state-frontend-buc6.onrender.com}`);
+      // console.log(` Server running on http://localhost:${port}`);
     });
 
   } catch (err) {
